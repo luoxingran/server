@@ -15,7 +15,8 @@ const YtDlpNotInstalled = require('../exceptions/YtDlpNotInstalled');
  *
  * @param {string} query
  */
-const dlArguments = (query) => ['-f', '140', '--dump-json', query];
+const SearchDlArguments = (query) => ['-f', '140', '--dump-json', query];
+const PlayDlArguments = (query) => ['-f', '\'bestaudio/best\'', '--format','\'bestaudio[ext!=webm]\'', query];
 /** @param {string} id */
 const byId = (id) => `https://www.youtube.com/watch?v=${id}`;
 /** @param {string} keyword */
@@ -48,12 +49,12 @@ async function getUrl(args) {
 }
 
 const search = async (info) => {
-	const { id } = await getUrl(dlArguments(byKeyword(info.keyword)));
+	const { id } = await getUrl(SearchDlArguments(byKeyword(info.keyword)));
 	return id;
 };
 
 const track = async (id) => {
-	const { url } = await getUrl(dlArguments(byId(id)));
+	const { url } = await getUrl(PlayDlArguments(byId(id)));
 	return url;
 };
 
