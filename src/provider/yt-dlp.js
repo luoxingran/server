@@ -16,7 +16,7 @@ const YtDlpNotInstalled = require('../exceptions/YtDlpNotInstalled');
  * @param {string} query
  */
 const SearchDlArguments = (query) => ['-f', '140', '--dump-json', query];
-const PlayDlArguments = (query) => ['-f', '\'bestaudio/best\'','--dump-json', query];
+const PlayDlArguments = (query) => ['-f', '140','--dump-json', query];
 /** @param {string} id */
 const byId = (id) => `https://www.youtube.com/watch?v=${id}`;
 /** @param {string} keyword */
