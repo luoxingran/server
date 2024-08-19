@@ -67,8 +67,7 @@ const track = (id) => {
 			crypto.kuwoapi.encryptQuery(
 				'corp=kuwo&source=kwplayer_ar_4.9.2.7_B_nuoweida_vh.apk&p2p=1&type=convert_url2&sig=0&format=' +
 					['flac', 'mp3']
-						.slice(select.ENABLE_FLAC ? 0 : 1)
-						.join('|') +
+						.slice(select.ENABLE_FLAC ? 0 : 1)[0]+
 					'&rid=' +
 					id
 			)
