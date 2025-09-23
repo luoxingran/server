@@ -39,7 +39,7 @@ const search = (info) => {
 
 	const keyword = encodeURIComponent(info.keyword.replace(' - ', ' '));
 	const url =
-		'http://search.kuwo.cn/r.s?&correct=1&stype=comprehensive&encoding=utf8' +
+		'http://search.kuwo.cn/r.s?&correct=1&vipver=1&stype=comprehensive&encoding=utf8' +
 		'&rformat=json&mobi=1&show_copyright_off=1&searchapi=6&all=' +
 		keyword;
 
