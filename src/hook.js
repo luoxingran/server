@@ -162,8 +162,7 @@ hook.request.before = (ctx) => {
 			.then((body) => {
 				if ('x-napm-retry' in req.headers)
 					delete req.headers['x-napm-retry'];
-				if ('x-aeapi' in req.headers)
-					req.headers['x-aeapi'] = "false";
+				if ('x-aeapi' in req.headers) req.headers['x-aeapi'] = 'false';
 				req.headers['X-Real-IP'] = '118.88.88.88';
 				if (
 					req.url.includes('stream') ||
