@@ -3,6 +3,7 @@ const PROVIDERS = {
 	qq: require('./provider/qq'),
 	kugou: require('./provider/kugou'),
 	kuwo: require('./provider/kuwo'),
+	bodian: require('./provider/bodian'),
 	migu: require('./provider/migu'),
 	joox: require('./provider/joox'),
 	youtube: require('./provider/youtube'),
